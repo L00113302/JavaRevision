@@ -1,26 +1,28 @@
-// Practical 2A Question 2
-// Mark Glenn
-// 23/09/2014
-// Program for age in years and days
- import java.util.Scanner;
- public class P02A2 
+import java.util.Scanner;
+public class P02A2
+{
+
+   public static void main (String[] args)
    {
-      public static void main(String [] args)
+      Scanner keyboardIn = new Scanner (System.in);
+      
+      // create an integer array with 5 integer elements
+      
+      int[] dayArray = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+      int month=0;
+      
+      do
       {
-      Scanner keyboardIn = new Scanner(System.in);
-         // declare variables
-         int age, days;
-         
-         System.out.print ("Enter your age: ");
-         age = keyboardIn.nextInt();
-         
-         
-         // do calculation
-         days = age * 365;
-         
-         // display area on screen
-         System.out.println("Your age in days is: " +days);
-         
-         
-         }
-      }   
+      
+      System.out.println ("Please enter the month 1-12:");
+      month = keyboardIn.nextInt();
+      
+      
+      // display values on screen
+      System.out.println("Month "+ month +" has " +dayArray[month-1] +" days");
+      }while (month != -1);
+      {
+      System.out.print ("Invalid Entry");
+      } 
+   }
+}          
